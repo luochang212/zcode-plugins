@@ -30,13 +30,13 @@ Set a goal, pick a mechanical metric, and let the loop iterate. The plugin's MCP
 
 For each iteration, exactly one pass through:
 
-1. Read `.auto/prompt.md` (and the ledger tail, which the hook injects). Pick the next hypothesis; prefer `asi.next_action_hint` from the last `log_experiment`.
+1. Read `.auto/prompt.md` (and the ledger tail, which the hook injects). **Revisit check**: before picking, check whether the latest result invalidated a previous discard's rollback reason (the injected 「弃用方向与理由」 line, or the `asi.rollback` rows in the ledger); if yes, weigh a targeted retry of that discard alongside the other candidates and annotate it with `asi.revisits_run`; if no, move on. Then pick the next hypothesis; prefer `asi.next_action_hint` from the last `log_experiment`.
 2. Make **one focused change** to the code under test.
 3. `run_experiment` (the benchmark). Note `metric`, `metrics`, `checks.failed`, `exit_code`. **If the metric looks noisy, use `repeat: 3` and log the returned `median_metric`.**
 4. `log_experiment`:
    - metric improved vs baseline → `status: "keep"` (auto-commits with `experiment:` prefix)
    - worse, unchanged, crashed, or checks failed → `status: "discard"` / `"crash"` / `"checks_failed"` (auto-reverts the working tree, `.auto/` survives)
-   - pass `asi` with `{ hypothesis, next_action_hint, rollback }`; it is the only memory that survives a revert.
+   - pass `asi` with `{ hypothesis, next_action_hint, rollback }`; it is the only memory that survives a revert. When deliberately retrying a previously discarded idea because its rollback reason no longer holds, add `revisits_run: <run number>` to `asi` so the dashboard marks it as a grounded revisit (`↻ Revisiting #N`); verification reruns for measurement noise are not revisits and get no annotation.
      4b. **The ledger is audited**: `log_experiment` rejects writes that break invariants. A keep that does not actually improve, a discarded improvement without a failed guard, broken run numbering, or a crash with un-rolled-back changes are all hard errors, not advice. (`.auto/config.json` `auditBypass: true` disables this; only use it knowingly.)
 5. **Read `confidence`, `plateau` and `doom_loop` from the log result**: low-confidence (red/yellow) improvements are "directional": keep them with a note, or re-measure with `repeat:3` before structural changes. If `plateau: true`, stop re-litigating the last 1%; either confirm with `repeat:3`, start a new segment (`init_experiment`), or summarize. If `doom_loop: true`, you are repeating/oscillating between the same hypotheses; stop and pick a structurally different direction.
 6. If `iteration cap` reached → `init_experiment` again for a new target, or stop and summarize.
@@ -58,7 +58,12 @@ Drop an executable script into `.auto/hooks/` to run custom logic around every e
 
 Use hooks for things the agent shouldn't do by itself: checking external docs before a change, anti-repetition guards, sending notifications, keeping a learnings journal. Treat `*_steer` as advisory input. Ready-made examples live in `hooks/examples/` (anti-thrash, idea-rotator, hypothesis-reflection, learnings-journal, macos-notify, auto-tag-winners); copy one into `.auto/hooks/` to use it. To write your own, load the `autoresearch-hooks` skill.
 
+## Unattended runs (optional, user-authorized only)
+
+When the user explicitly asks for unattended operation ("run overnight", "无人值守跑"), the loop can keep going across turns: create a scheduled self-wakeup with the host's `CronCreate` tool (recurring + maxRuns, self-contained wake prompt) right after authorization; wake turns re-enter the loop via the `.auto/` facts. Only create the task on explicit user request - an unprompted scheduled wakeup is a scare behavior. Cleanup happens in user turns (`/autoresearch:off` / `/autoresearch:clear` / `/autoresearch:finalize` include the CronList + CronDelete step); leftover wakes idle cheaply until maxRuns if the loop ends early. Full protocol: `references/unattended.md`
+
 ## Details
 
 - Setup guide (target → metric → measure.sh → checks.sh): `references/setup-guide.md`
 - Full loop protocol and failure handling: `references/loop-protocol.md`
+- Unattended continuation (scheduled self-wakeup, authorization + template + cleanup): `references/unattended.md`
