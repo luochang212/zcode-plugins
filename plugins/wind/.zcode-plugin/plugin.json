@@ -1,0 +1,24 @@
+{
+  "name": "wind",
+  "description": "MCP services for Wind stock, global stock, index, fund, bond, economic, and document data.",
+  "description_i18n": {
+    "en": "MCP services for Wind stock, global stock, index, fund, bond, economic, and document data.",
+    "zh-CN": "万得股票、海外股票、指数、基金、债券、宏观经济与公告研报数据 MCP 服务。"
+  },
+  "version": "0.1.0",
+  "author": {
+    "name": "Z.ai",
+    "url": "https://z.ai"
+  },
+  "keywords": [
+    "wind",
+    "finance",
+    "mcp"
+  ],
+  "displayName": "Wind 万得",
+  "displayName_i18n": {
+    "en": "Wind",
+    "zh-CN": "Wind 万得"
+  },
+  "requiresPaidPlan": true
+}

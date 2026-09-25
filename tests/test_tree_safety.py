@@ -160,9 +160,13 @@ class RepositoryTreeTest(unittest.TestCase):
                 )
 
     def test_github_workflows_pin_read_only_token(self) -> None:
-        for wf in ("validate.yml", "pr-title.yml", "publish.yml"):
-            text = (ROOT / ".github" / "workflows" / wf).read_text(encoding="utf-8")
-            with self.subTest(workflow=wf):
+        # PR checks run in the internal intake (sync_external_prs.py), not on
+        # GitHub; only the Pages publisher is left here.
+        workflows = sorted((ROOT / ".github" / "workflows").glob("*.yml"))
+        self.assertEqual([wf.name for wf in workflows], ["publish.yml"])
+        for wf in workflows:
+            text = wf.read_text(encoding="utf-8")
+            with self.subTest(workflow=wf.name):
                 self.assertIn("permissions:", text)
                 self.assertNotIn("pull_request_target", text)
 

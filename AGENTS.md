@@ -69,3 +69,15 @@ Keep secrets, private endpoints, customer data, machine-specific paths, and unre
 - Hook events, matchers, input/output contracts, or exit codes: [Section 4 — Hooks guide](docs/PLUGIN_DEVELOPMENT.md#4-hooks-guide)
 - Documentation structure and Agent-facing writing: [Section 5 — Writing for people and Agents](docs/PLUGIN_DEVELOPMENT.md#5-writing-for-people-and-agents)
 - Contribution and review requirements: [CONTRIBUTING.md](CONTRIBUTING.md)
+
+## Change Scope Reminder
+
+When adding a plugin, keep the merge request focused on the plugin package and its required root marketplace entry. Do not add an outer repository `docs/` directory or unrelated documentation files unless the user explicitly requests them.
+
+## Git and Merge Request Workflow
+
+- Use Conventional Commits for commit messages and merge request titles, for example `fix(assets): refresh business plugin icons`.
+- Before pushing a working branch or updating its merge request, fetch the latest `origin/main` and rebase the working branch onto it.
+- Resolve and verify any rebase conflicts locally before publishing the rewritten history.
+- After a rebase, update an existing remote working branch with `git push --force-with-lease`; never use an unguarded force push.
+- Confirm that the worktree is clean and rerun the relevant validation commands before the final push.

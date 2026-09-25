@@ -1,0 +1,24 @@
+{
+  "name": "hexin",
+  "description": "MCP services for RoyalFlush iFinD stock, global stock, index, fund, and bond data.",
+  "description_i18n": {
+    "en": "MCP services for RoyalFlush iFinD stock, global stock, index, fund, and bond data.",
+    "zh-CN": "同花顺股票、海外股票、指数、基金与债券数据 MCP 服务。"
+  },
+  "version": "0.1.0",
+  "author": {
+    "name": "Z.ai",
+    "url": "https://z.ai"
+  },
+  "keywords": [
+    "hexin",
+    "finance",
+    "mcp"
+  ],
+  "displayName": "同花顺",
+  "displayName_i18n": {
+    "en": "RoyalFlush iFinD",
+    "zh-CN": "同花顺"
+  },
+  "requiresPaidPlan": true
+}

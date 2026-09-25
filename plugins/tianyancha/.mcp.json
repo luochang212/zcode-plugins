@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "tianyancha": {
+      "type": "http",
+      "url": "${ZCODE_BASE_URL}/api/v1/mcp/server/finance_tianyancha",
+      "auth": {
+        "type": "zcode_official",
+        "provider": "jwt_token"
+      }
+    }
+  }
+}

@@ -11,27 +11,6 @@
   },
   "plugins": [
     {
-      "name": "example-plugin",
-      "source": "./plugins/example-plugin",
-      "description": "A minimal ZCode template plugin demonstrating the recommended structure: manifest, command, skill, hooks, and MCP sample config. Copy it to start a new plugin.",
-      "description_i18n": {
-        "en": "A minimal ZCode template plugin demonstrating the recommended structure: manifest, command, skill, hooks, and MCP sample config. Copy it to start a new plugin.",
-        "zh-CN": "一个最小 ZCode 模板插件，演示推荐目录结构（manifest、command、skill、hooks、MCP 样例配置）。新建插件时可直接复制。"
-      },
-      "version": "0.3.0",
-      "author": {
-        "name": "Z.ai"
-      },
-      "category": "template",
-      "keywords": [
-        "template",
-        "example",
-        "starter",
-        "hooks",
-        "mcp"
-      ]
-    },
-    {
       "name": "cloudbase-skills",
       "source": "./plugins/cloudbase-skills",
       "description": "CloudBase development skills and MCP integration for building, deploying, and troubleshooting Web, WeChat Mini Program, database, cloud function, CloudRun, storage, and AI projects.",
@@ -463,6 +442,327 @@
         "lbo",
         "earnings"
       ]
+    },
+    {
+      "name": "gitlab",
+      "source": "./plugins/gitlab",
+      "description": "GitLab CLI workflows based on GitLab's official Agent Skills for merge requests, issues, CI/CD, repositories, releases, and API operations.",
+      "description_i18n": {
+        "en": "GitLab CLI workflows based on GitLab's official Agent Skills for merge requests, issues, CI/CD, repositories, releases, and API operations.",
+        "zh-CN": "基于官方 GitLab CLI 的 Merge Request、Issue、CI/CD、仓库、Release 与 API 工作流。"
+      },
+      "version": "0.1.3",
+      "author": {
+        "name": "Z.ai",
+        "url": "https://z.ai"
+      },
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/gitlab/icon.png",
+      "category": "developer-tools",
+      "keywords": [
+        "gitlab",
+        "glab",
+        "merge-request",
+        "issue",
+        "ci-cd",
+        "gitlab-api"
+      ]
+    },
+    {
+      "name": "alibaba-cloud-cli",
+      "displayName": "Alibaba Cloud CLI",
+      "displayName_i18n": {
+        "en": "Alibaba Cloud CLI",
+        "zh-CN": "阿里云 CLI"
+      },
+      "source": "./plugins/alibaba-cloud-cli",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/alibaba-cloud-cli/icon.png",
+      "description": "Alibaba Cloud CLI workflows for credential setup, profile checks, and safe cloud resource operations.",
+      "description_i18n": {
+        "en": "Alibaba Cloud CLI workflows for credential setup, profile checks, and safe cloud resource operations.",
+        "zh-CN": "阿里云 CLI 工作流：配置凭证与 profile，并安全执行云资源查询和操作。"
+      },
+      "version": "0.1.2",
+      "author": {
+        "name": "Z.ai",
+        "url": "https://z.ai"
+      },
+      "category": "developer-tools",
+      "keywords": [
+        "alibaba-cloud",
+        "aliyun",
+        "aliyun-cli",
+        "cloud",
+        "ecs",
+        "oss",
+        "ram"
+      ]
+    },
+    {
+      "name": "lark-cli",
+      "displayName": "Lark CLI",
+      "displayName_i18n": {
+        "en": "Lark CLI",
+        "zh-CN": "飞书 CLI"
+      },
+      "source": "./plugins/lark-cli",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/lark-cli/icon.png",
+      "description": "Lark CLI workflows for docs, sheets, Base, calendar, messaging, and other SaaS resources with guided setup and OAuth login.",
+      "description_i18n": {
+        "en": "Lark CLI workflows for docs, sheets, Base, calendar, messaging, and other SaaS resources with guided setup and OAuth login.",
+        "zh-CN": "Lark CLI 工作流：覆盖文档、表格、多维表格、日历、消息等 SaaS 资源，并引导应用配置与 OAuth 登录。"
+      },
+      "version": "0.1.2",
+      "author": {
+        "name": "Z.ai",
+        "url": "https://z.ai"
+      },
+      "category": "productivity",
+      "keywords": [
+        "feishu",
+        "lark",
+        "lark-cli",
+        "docs",
+        "sheets",
+        "base",
+        "calendar",
+        "messaging"
+      ]
+    },
+    {
+      "name": "tencent-meeting-cli",
+      "displayName": "Tencent Meeting CLI",
+      "displayName_i18n": {
+        "en": "Tencent Meeting CLI",
+        "zh-CN": "腾讯会议 CLI"
+      },
+      "source": "./plugins/tencent-meeting-cli",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/tencent-meeting-cli/icon.png",
+      "description": "Tencent Meeting CLI workflows with OAuth2 setup, meeting management, recordings, and attendee reports.",
+      "description_i18n": {
+        "en": "Tencent Meeting CLI workflows with OAuth2 setup, meeting management, recordings, and attendee reports.",
+        "zh-CN": "腾讯会议 CLI 工作流：OAuth2 授权、会议管理、录制管理和参会报告查询。"
+      },
+      "version": "0.1.3",
+      "author": {
+        "name": "Z.ai",
+        "url": "https://z.ai"
+      },
+      "category": "productivity",
+      "keywords": [
+        "tencent-meeting",
+        "tencentmeeting",
+        "meeting",
+        "cli",
+        "oauth2"
+      ]
+    },
+    {
+      "name": "dingtalk-cli",
+      "displayName": "DingTalk CLI",
+      "displayName_i18n": {
+        "en": "DingTalk CLI",
+        "zh-CN": "钉钉 CLI"
+      },
+      "source": "./plugins/dingtalk-cli",
+      "description": "DingTalk Workspace CLI workflows with OAuth/device authorization, profile checks, and optional upstream Skills.",
+      "description_i18n": {
+        "en": "DingTalk Workspace CLI workflows with OAuth/device authorization, profile checks, and optional upstream Skills.",
+        "zh-CN": "钉钉 Workspace CLI 工作流：OAuth/设备授权、验证组织账号，并按需安装上游 Skills。"
+      },
+      "version": "0.1.1",
+      "author": {
+        "name": "Z.ai",
+        "url": "https://z.ai"
+      },
+      "homepage": "https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli",
+      "repository": "https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli",
+      "license": "Apache-2.0",
+      "keywords": [
+        "dingtalk",
+        "dws",
+        "workspace",
+        "chat",
+        "docs",
+        "calendar",
+        "tasks"
+      ],
+      "category": "productivity",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/dingtalk-cli/icon.png"
+    },
+    {
+      "name": "wecom-cli",
+      "displayName": "WeCom CLI",
+      "displayName_i18n": {
+        "en": "WeCom CLI",
+        "zh-CN": "企业微信 CLI"
+      },
+      "source": "./plugins/wecom-cli",
+      "description": "WeCom CLI workflows for messages, docs, sheets, mail, calendar, meetings, contacts, and todos with QR authentication.",
+      "description_i18n": {
+        "en": "WeCom CLI workflows for messages, docs, sheets, mail, calendar, meetings, contacts, and todos with QR authentication.",
+        "zh-CN": "企业微信 CLI 工作流：覆盖消息、文档、表格、邮件、日历、会议、通讯录和待办，并支持扫码授权与状态检查。"
+      },
+      "version": "0.1.1",
+      "author": {
+        "name": "Z.ai",
+        "url": "https://z.ai"
+      },
+      "homepage": "https://github.com/WecomTeam/wecom-cli",
+      "repository": "https://github.com/WecomTeam/wecom-cli",
+      "license": "MIT",
+      "keywords": [
+        "wecom",
+        "wechat-work",
+        "wecom-cli",
+        "message",
+        "docs",
+        "sheets",
+        "calendar",
+        "todo"
+      ],
+      "category": "productivity",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/wecom-cli/icon.png"
+    },
+    {
+      "name": "hexin",
+      "description": "MCP services for RoyalFlush iFinD stock, global stock, index, fund, and bond data.",
+      "description_i18n": {
+        "en": "MCP services for RoyalFlush iFinD stock, global stock, index, fund, and bond data.",
+        "zh-CN": "同花顺股票、海外股票、指数、基金与债券数据 MCP 服务。"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Z.ai",
+        "url": "https://z.ai"
+      },
+      "keywords": [
+        "hexin",
+        "finance",
+        "mcp"
+      ],
+      "displayName": "同花顺",
+      "displayName_i18n": {
+        "en": "RoyalFlush iFinD",
+        "zh-CN": "同花顺"
+      },
+      "requiresPaidPlan": true,
+      "source": "./plugins/hexin",
+      "category": "finance",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/hexin/icon.png"
+    },
+    {
+      "name": "wind",
+      "description": "MCP services for Wind stock, global stock, index, fund, bond, economic, and document data.",
+      "description_i18n": {
+        "en": "MCP services for Wind stock, global stock, index, fund, bond, economic, and document data.",
+        "zh-CN": "万得股票、海外股票、指数、基金、债券、宏观经济与公告研报数据 MCP 服务。"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Z.ai",
+        "url": "https://z.ai"
+      },
+      "keywords": [
+        "wind",
+        "finance",
+        "mcp"
+      ],
+      "displayName": "Wind 万得",
+      "displayName_i18n": {
+        "en": "Wind",
+        "zh-CN": "Wind 万得"
+      },
+      "requiresPaidPlan": true,
+      "source": "./plugins/wind",
+      "category": "finance",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/wind/icon.png"
+    },
+    {
+      "name": "tianyancha",
+      "description": "MCP service for Tianyancha company information queries.",
+      "description_i18n": {
+        "en": "MCP service for Tianyancha company information queries.",
+        "zh-CN": "天眼查企业信息查询 MCP 服务。"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Z.ai",
+        "url": "https://z.ai"
+      },
+      "keywords": [
+        "tianyancha",
+        "finance",
+        "mcp"
+      ],
+      "displayName": "天眼查",
+      "displayName_i18n": {
+        "en": "Tianyancha",
+        "zh-CN": "天眼查"
+      },
+      "requiresPaidPlan": true,
+      "source": "./plugins/tianyancha",
+      "category": "finance",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/tianyancha/icon.png"
+    },
+    {
+      "name": "finance-search",
+      "description": "MCP services for SEC EDGAR filing search and financial web and news search.",
+      "description_i18n": {
+        "en": "MCP services for SEC EDGAR filing search and financial web and news search.",
+        "zh-CN": "SEC EDGAR 文件检索与财经网页、新闻搜索 MCP 服务。"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Z.ai",
+        "url": "https://z.ai"
+      },
+      "keywords": [
+        "finance-search",
+        "finance",
+        "mcp"
+      ],
+      "displayName": "金融聚合搜索",
+      "displayName_i18n": {
+        "en": "Financial Aggregated Search",
+        "zh-CN": "金融聚合搜索"
+      },
+      "requiresPaidPlan": true,
+      "source": "./plugins/finance-search",
+      "category": "finance",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/finance-search/icon.png"
+    },
+    {
+      "name": "obsidian",
+      "displayName": "Obsidian",
+      "displayName_i18n": {
+        "en": "Obsidian",
+        "zh-CN": "Obsidian"
+      },
+      "source": "./plugins/obsidian",
+      "description": "Obsidian authoring skills from kepano/obsidian-skills: Obsidian Flavored Markdown notes, Bases database views, JSON Canvas boards, vault automation via Obsidian CLI, clean web extraction with Defuddle, and Knap template rendering — plus visualization skills from axtonliu/axton-obsidian-visual-skills: Mermaid and Excalidraw diagram generation and text-to-canvas layout. A setup skill verifies and installs the Obsidian CLI, defuddle, and knap.",
+      "description_i18n": {
+        "en": "Obsidian authoring skills from kepano/obsidian-skills: Obsidian Flavored Markdown notes, Bases database views, JSON Canvas boards, vault automation via Obsidian CLI, clean web extraction with Defuddle, and Knap template rendering — plus visualization skills from axtonliu/axton-obsidian-visual-skills: Mermaid and Excalidraw diagram generation and text-to-canvas layout. A setup skill verifies and installs the Obsidian CLI, defuddle, and knap.",
+        "zh-CN": "来自 kepano/obsidian-skills 的 Obsidian 创作技能：Obsidian 风格 Markdown 笔记、Bases 数据库视图、JSON Canvas 白板、Obsidian CLI 库操作、Defuddle 网页正文提取、Knap 模板批量生成笔记；并集成 axtonliu/axton-obsidian-visual-skills 的可视化技能：Mermaid/Excalidraw 图表生成与文本转画布布局。附 setup 技能，检测并安装 Obsidian CLI、defuddle 与 knap。"
+      },
+      "version": "0.1.2",
+      "author": {
+        "name": "Z.ai",
+        "url": "https://z.ai"
+      },
+      "category": "productivity",
+      "keywords": [
+        "obsidian",
+        "markdown",
+        "bases",
+        "canvas",
+        "notes",
+        "defuddle",
+        "knap",
+        "mermaid",
+        "excalidraw",
+        "visualization"
+      ],
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/obsidian/icon.png"
     }
   ]
 }

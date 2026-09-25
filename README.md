@@ -19,8 +19,12 @@ Use this repository to browse available plugins, install the marketplace in comp
 | [**cloudbase-skills**](./plugins/cloudbase-skills) | `developer-tools` | CloudBase development skills and MCP integration for Web, Mini Program, database, cloud functions, CloudRun, storage, and AI projects. |
 | [**mimosa**](./plugins/mimosa) | `developer-tools` | Local-first security guardrails with pre-write hooks, review and Git gates, security commands, and optional sealed deep scans. |
 | [**github**](./plugins/github) | `developer-tools` | GitHub CLI workflows for commits, pull requests, issues, releases, Actions, repositories, and Codespaces. |
+| [**gitlab**](./plugins/gitlab) | `developer-tools` | GitLab CLI workflows for merge requests, issues, CI/CD, repositories, releases, and API operations, including self-managed instances. |
+| [**alibaba-cloud-cli**](./plugins/alibaba-cloud-cli) | `developer-tools` | Alibaba Cloud CLI workflows for credential setup, profile checks, and safe cloud resource operations. |
+| [**lark-cli**](./plugins/lark-cli) | `utilities` | Lark CLI workflows for docs, sheets, Base, calendar, messaging, and other SaaS resources with guided setup and OAuth login. |
+| [**dingtalk-cli**](./plugins/dingtalk-cli) | `productivity` | DingTalk Workspace CLI workflows with OAuth/device authorization, profile checks, and optional upstream Skills. |
+| [**wecom-cli**](./plugins/wecom-cli) | `productivity` | WeCom CLI workflows for messages, docs, sheets, mail, calendar, meetings, contacts, and todos with QR authentication. |
 | [**video2code**](./plugins/video2code) | `productivity` | Replicate a webpage from a screen recording or URL: record with the built-in WebView, observe frames, scaffold a React app, and verify against the source. |
-| [**example-plugin**](./plugins/example-plugin) | `template` | Template demonstrating the recommended plugin structure. Copy it to start a new plugin. |
 
 ### Finance plugins
 
@@ -49,12 +53,11 @@ The `category` field in [`marketplace.json`](./marketplace.json) keeps discovery
 
 | Category | Use it for | Current plugins |
 | --- | --- | --- |
-| `developer-tools` | Development, code quality, Git, CI, and engineering workflows | `cloudbase-skills`, `mimosa`, `github` |
+| `developer-tools` | Development, code quality, Git, CI, and engineering workflows | `cloudbase-skills`, `mimosa`, `github`, `gitlab`, `alibaba-cloud-cli` |
 | `productivity` | Planning, knowledge work, and personal workflow automation | `video2code` |
-| `utilities` | General-purpose helpers that do not fit another category | — |
+| `utilities` | General-purpose helpers that do not fit another category | `lark-cli` |
 | `finance` | Finance-domain workflows: markets, accounting, risk, and fintech integrations | `write-research`, `read-macro`, `assess-credit`, `pick-funds`, `watch-positions`, `model-deals`, `vet-companies`, `find-clients`, `run-fpa`, `accounting-and-reporting` |
 | `guides` | Documentation, learning, and reference-only plugins | — |
-| `template` | Starter plugins and examples intended to be copied | `example-plugin` |
 | `other` | A plugin that does not fit the categories above | — |
 
 ## Installation

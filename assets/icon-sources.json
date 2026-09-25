@@ -64,6 +64,16 @@
     "sha256": "63039fda32a14604a62d298a3ac48783dcba478fc2a2b09f2c18636dfd5f3225"
   },
   {
+    "name": "alibaba-cloud-cli",
+    "icon": "alibaba-cloud-cli/icon.png",
+    "source": "https://avatars.githubusercontent.com/u/941070?v=4&s=512",
+    "matchedBy": "official-github-organization-avatar-normalized",
+    "homepage": "https://github.com/aliyun",
+    "normalization": "Trim transparent margins, resize proportionally to 176px wide, center on a transparent 256x256 RGBA canvas; preserve brand colors.",
+    "mimeType": "image/png",
+    "sha256": "37c636a4890e30a7ae7c3654144757b89c7d1a31d61c1b87ef40962d39e2b33c"
+  },
+  {
     "name": "alloydb",
     "icon": "alloydb/icon.png",
     "source": "https://services.google.com/fh/files/misc/core-products-icons.zip",
@@ -707,6 +717,15 @@
     "sha256": "5c83bd5e6dea6e97e81404b4e8d69a1fdd5e12724af8b83eda9aaf08fd031a58"
   },
   {
+    "name": "dingtalk-cli",
+    "icon": "dingtalk-cli/icon.png",
+    "source": "https://gw.alicdn.com/imgextra/i3/O1CN014ZbI6ZTEhdC0ttN2_!!6000000003783-2-tps-444-444.png",
+    "matchedBy": "official-homepage-favicon",
+    "homepage": "https://www.dingtalk.com",
+    "mimeType": "image/png",
+    "sha256": "b3fb0715857df5d23213b5265166fabcb7f7b4b290890d7b5682a027cf39c85d"
+  },
+  {
     "name": "discord",
     "icon": "discord/icon.png",
     "source": "https://github.com/discord.png?size=512",
@@ -853,10 +872,10 @@
   {
     "name": "gitlab",
     "icon": "gitlab/icon.png",
-    "source": "https://github.com/gitlab-org.png?size=512",
-    "matchedBy": "official-github-organization-avatar",
+    "source": "https://about.gitlab.com/images/press/gitlab-logo-500-rgb.png",
+    "matchedBy": "official-gitlab-press-kit-logomark-trimmed-centered-176px",
     "mimeType": "image/png",
-    "sha256": "ea2f9a9bd66bd8a520ccc5df06cc788b6fd6f669ee9b7cf0892854d96315614b"
+    "sha256": "b67e1ff07805a95f62f01a8ce1797ae3e25be22d79252f074a73056d249c62d5"
   },
   {
     "name": "gopls-lsp",
@@ -1031,6 +1050,16 @@
     "matchedBy": "official-github-organization-avatar",
     "mimeType": "image/png",
     "sha256": "6988c9dc368db46bfc4c3b8aebacfa87276c022fece7ae08feab37969f85c122"
+  },
+  {
+    "name": "lark-cli",
+    "icon": "lark-cli/icon.png",
+    "source": "https://p1-hera.feishucdn.com/tos-cn-i-jbbdkfciu3/84a9f036fe2b44f99b899fff4beeb963~tplv-jbbdkfciu3-image:512:512.image",
+    "matchedBy": "official-homepage-open-graph-image-normalized",
+    "homepage": "https://www.feishu.cn/",
+    "normalization": "Use the official homepage image at 512px, trim transparent margins, resize proportionally to 160px wide, center on a transparent 256x256 RGBA canvas; preserve brand colors.",
+    "mimeType": "image/png",
+    "sha256": "ed459fb792bdd0abef88ee91f1ec82925d9c04fdbfcb3b72cf8d67b02f6f2748"
   },
   {
     "name": "learn-with-coursera",
@@ -1297,6 +1326,16 @@
     "matchedBy": "alias:nvidia",
     "mimeType": "image/png",
     "sha256": "29a6ede33f370301db496f40170c0afa585f6a4d5a8c68c372fd83e2d441606f"
+  },
+  {
+    "name": "obsidian",
+    "icon": "obsidian/icon.png",
+    "source": "https://obsidian.md/favicon.svg",
+    "matchedBy": "official-homepage-favicon-svg-converted-padded",
+    "homepage": "https://obsidian.md",
+    "mimeType": "image/png",
+    "sha256": "6e4b6881c3e3c304cbcaa53ffb202aa68fece3a0082a451f1638ff2c730a1285",
+    "transform": "Render SVG at 216x216 centered on a transparent 256x256 canvas (20px padding)."
   },
   {
     "name": "oracle-ai-data-platform-workbench-databricks-migrator",
@@ -1961,6 +2000,15 @@
     "homepage": "https://villagesql.com",
     "mimeType": "image/png",
     "sha256": "3bc9628c8e6cc8962860e2159eb723532dbe418316c8964b210745f4b8475440"
+  },
+  {
+    "name": "wecom-cli",
+    "icon": "wecom-cli/icon.png",
+    "source": "https://wwcdn.weixin.qq.com/node/ww/wwmng/style/images/index_share_logo$13c64306.png",
+    "matchedBy": "official-homepage-share-image",
+    "homepage": "https://work.weixin.qq.com",
+    "mimeType": "image/png",
+    "sha256": "f89d5976ca6382cb1cab856bfd572daa543bd855e39431825cff0b14c1fbd1be"
   },
   {
     "name": "windsor-ai",
