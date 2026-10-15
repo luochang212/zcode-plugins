@@ -142,7 +142,8 @@
       },
       "version": "0.1.0",
       "author": {
-        "name": "luochang212"
+        "name": "luochang212",
+        "url": "https://github.com/luochang212"
       },
       "category": "developer-tools",
       "keywords": [
@@ -152,7 +153,17 @@
         "loop",
         "benchmark",
         "mcp"
-      ]
+      ],
+      "examplePrompts": [
+        "Run an experiment loop to make this benchmark faster without breaking the checks",
+        "Which approaches were tried so far, and why were the discarded ones rejected?"
+      ],
+      "examplePrompts_i18n": {
+        "zh-CN": [
+          "跑一个实验循环，在不破坏正确性检查的前提下把这个基准跑得更快",
+          "到目前为止试过哪些方向？被丢弃的那些为什么被丢弃？"
+        ]
+      }
     },
     {
       "name": "accounting-and-reporting",
