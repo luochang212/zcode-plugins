@@ -11,6 +11,7 @@ Use this repository to browse available plugins, install the marketplace in comp
 - [Contributing guide](./CONTRIBUTING.md) ([中文](./CONTRIBUTING_CN.md))
 - [Distribution format](./docs/distribution.md) ([中文](./docs/distribution_CN.md))
 - [Plugin development tutorial](./docs/PLUGIN_DEVELOPMENT.md) ([中文](./docs/PLUGIN_DEVELOPMENT_CN.md))
+- [UI Plugin capabilities, API and debugging guide](./UI_PLUGIN.en.md), featuring Excalidraw.
 
 ## Available Plugins
 
@@ -25,6 +26,27 @@ Use this repository to browse available plugins, install the marketplace in comp
 | [**dingtalk-cli**](./plugins/dingtalk-cli) | `productivity` | DingTalk Workspace CLI workflows with OAuth/device authorization, profile checks, and optional upstream Skills. |
 | [**wecom-cli**](./plugins/wecom-cli) | `productivity` | WeCom CLI workflows for messages, docs, sheets, mail, calendar, meetings, contacts, and todos with QR authentication. |
 | [**video2code**](./plugins/video2code) | `productivity` | Replicate a webpage from a screen recording or URL: record with the built-in WebView, observe frames, scaffold a React app, and verify against the source. |
+
+### UI plugins
+
+- `blender` `0.2.2`: Edit Blender scenes with an interactive 3D panel and MCP tools.
+- `excalidraw` `0.2.2`: Create and edit diagrams with Excalidraw and MCP tools.
+- `openpencil` `0.2.3`: Edit design files with OpenPencil and MCP tools.
+- `zcode-mcp-app-dev` `0.1.1`: Develop MCP Apps for ZCode with official SDKs and a small host-extension reference.
+
+- `photocraft` `0.2.2`: PhotoCraft image editing.
+- `vectorcraft` `0.2.2`: VectorCraft vector drawing.
+- `pdfcraft` `0.2.2`: PdfCraft PDF editing.
+- `designcraft` `0.2.2`: DesignCraft page layout.
+- `wordcraft` `0.2.2`: WordCraft word processing.
+- `gridcraft` `0.2.2`: GridCraft spreadsheets.
+- `deckcraft` `0.2.2`: DeckCraft presentations.
+- `cadcraft` `0.2.2`: CADCraft CAD drawings.
+- `soundcraft` `0.2.2`: SoundCraft audio editing.
+
+These nine Craft plugins embed pinned Trunk/WASM editors, with workspace imports, saves and all 334 upstream MCP tool definitions connected to the live editor. Native-only capabilities remain subject to the Web platform boundary. See the [adapter documentation](./ui-plugins/craft-runtime/README.md) for build provenance, limitations and validation.
+
+UI plugin runtimes (`plugins/<name>/dist/`) are build outputs and are not committed. The release pipeline builds them from `ui-plugins/` and publishes the ZIPs; a Git checkout alone cannot install a compiled UI plugin. For source development use Node.js 24+ and pnpm 10.33.2: run `pnpm install --frozen-lockfile` and `pnpm build`, then register `dist/local-marketplace`. Rebuild after changing a plugin's source or version.
 
 ### Finance plugins
 
@@ -66,6 +88,12 @@ The `category` field in [`marketplace.json`](./marketplace.json) keeps discovery
 
 ZCode includes the official marketplace. Open the plugin manager, choose a plugin, and install it directly.
 
+### Test plugins from source
+
+Run `pnpm install --frozen-lockfile` and `pnpm build`. Add the absolute path to `dist/local-marketplace` through **Plugin Marketplace → New**, then install and enable the plugins you choose. The generated source includes every entry in the root `marketplace.json`, including your own plugins; no plugin list is built into the scripts.
+
+Ordinary plugins and UI plugins share registration, installation, and updates. After editing, rebuild, refresh the local source, and reinstall the selected plugin. Building or running the host's `pnpm dev:desktop` does not install plugins. Use the [existing development workflow](docs/PLUGIN_DEVELOPMENT.md#18-test-a-plugin-locally) for CLI commands and verification; see the [build contract](docs/MCP_APP_BUILD.md) for compilation and staging.
+
 ## Community
 
 Have a question about a plugin, or building one of your own? Join the ZCode plugin developers on Discord — that is where we answer questions, share work in progress, and announce marketplace releases.
@@ -80,7 +108,7 @@ Developers in mainland China can join our Feishu group instead — see the [中�
 
 Community contributions are welcome:
 
-1. Copy [`plugins/example-plugin/`](./plugins/example-plugin) to `plugins/<your-plugin-name>/` and follow the [development tutorial](./docs/PLUGIN_DEVELOPMENT.md).
+1. Copy [`plugins/example-plugin/`](./plugins/example-plugin) to `external_plugins/<your-plugin-name>/` and follow the [development tutorial](./docs/PLUGIN_DEVELOPMENT.md).
 2. Register the plugin in [`marketplace.json`](./marketplace.json), including its category.
 3. Provide equivalent English and Chinese documentation.
 4. Run the local checks:
@@ -90,7 +118,7 @@ python3 scripts/validate.py
 python3 scripts/build_dist.py
 ```
 
-5. Open a GitHub pull request and complete the contribution checklist.
+5. Open a GitHub pull request and complete the contribution checklist. **You must select UI Plugin or Standard plugin in the PR template and list the affected plugin names.** Not applicable is reserved for repository-only changes; see the [classification rules](CONTRIBUTING.md#declare-the-plugin-type-required).
 
 Maintainers review submissions for quality, security, compatibility, and licensing. Accepted changes are published through the official release process, and the pull request receives a status update when publication is complete.
 
@@ -99,3 +127,7 @@ See the [contributing guide](./CONTRIBUTING.md) for the complete requirements.
 ## License
 
 Apache License 2.0
+
+## MCP Apps
+
+Interactive plugin sources are maintained in `ui-plugins/` and their installable packages in `plugins/`. See [build and verification](docs/MCP_APP_BUILD.md). The optional `zcode-mcp-app-dev` skill provides official SDK guidance and ZCode extension examples; it is not a runtime dependency.

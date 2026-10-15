@@ -22,7 +22,7 @@
       "author": {
         "name": "TencentCloudBase"
       },
-      "icon": "https://docs.cloudbase.net/en/img/favicon.png",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/cloudbase-skills/icon.png",
       "category": "developer-tools",
       "keywords": [
         "cloudbase",
@@ -46,7 +46,7 @@
         "en": "Local-first security guardrails for ZCode with pre-write hooks, end-of-turn review, Git gates, commands, a security-scan skill, and an optional MCP server for sealed deep scans.",
         "zh-CN": "面向 ZCode 的本地优先代码安全防线，提供写入前 Hook、任务收尾复查、Git 门禁、命令、安全扫描 Skill，以及用于密封深扫的可选 MCP 服务。"
       },
-      "version": "1.0.3",
+      "version": "1.0.4",
       "author": {
         "name": "Mimosa"
       },
@@ -763,6 +763,505 @@
         "visualization"
       ],
       "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/obsidian/icon.png"
+    },
+    {
+      "name": "hyper3d-rodin",
+      "displayName": "Hyper3D Rodin",
+      "displayName_i18n": {
+        "en": "Hyper3D Rodin",
+        "zh-CN": "Hyper3D Rodin"
+      },
+      "description": "Generate 3D models from text or reference images with Hyper3D Rodin Gen-2.5, split completed models with BANG, and retrieve results.",
+      "description_i18n": {
+        "en": "Generate 3D models from text or reference images with Hyper3D Rodin Gen-2.5, split completed models with BANG, and retrieve results.",
+        "zh-CN": "通过文字或参考图片生成 Hyper3D Rodin Gen-2.5 三维模型，使用 BANG 拆分已完成模型，并获取生成结果。"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Deemos",
+        "url": "https://hyper3d.ai"
+      },
+      "homepage": "https://hyper3d.ai",
+      "license": "MIT",
+      "keywords": [
+        "hyper3d",
+        "rodin",
+        "3d",
+        "text-to-3d",
+        "image-to-3d",
+        "bang",
+        "mcp"
+      ],
+      "source": "./plugins/hyper3d-rodin",
+      "category": "developer-tools",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/hyper3d-rodin/icon.png"
+    },
+    {
+      "name": "zcode-mcp-app-dev",
+      "version": "0.1.1",
+      "description": "Develop MCP Apps for ZCode with official SDKs and a small host-extension reference.",
+      "description_i18n": {
+        "en": "Develop MCP Apps for ZCode with official SDKs and a small host-extension reference.",
+        "zh-CN": "使用官方 SDK 开发 ZCode MCP App，附宿主扩展约定与独立构建指引。"
+      },
+      "author": {
+        "name": "ZCode"
+      },
+      "source": "./plugins/zcode-mcp-app-dev",
+      "category": "developer-tools",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/zcode-mcp-app-dev/icon.png"
+    },
+    {
+      "name": "blender",
+      "componentTypes": ["ui"],
+      "displayName": "Blender",
+      "displayName_i18n": {
+        "en": "Blender",
+        "zh-CN": "Blender"
+      },
+      "version": "0.2.3",
+      "source": "./plugins/blender",
+      "description": "在 ZCode 对话旁打开 Blender 场景：Agent 修改物体、材质、相机并渲染预览；面板用 Three.js 轻量浏览。",
+      "description_i18n": {
+        "en": "Edit Blender scenes with an interactive 3D panel and MCP tools.",
+        "zh-CN": "在 ZCode 对话旁打开 Blender 场景：Agent 修改物体、材质、相机并渲染预览；面板用 Three.js 轻量浏览。"
+      },
+      "category": "productivity",
+      "author": {
+        "name": "ZCode"
+      },
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/blender/icon.png"
+    },
+    {
+      "name": "excalidraw",
+      "componentTypes": ["ui"],
+      "displayName": "Excalidraw",
+      "displayName_i18n": {
+        "en": "Excalidraw",
+        "zh-CN": "Excalidraw"
+      },
+      "version": "0.2.2",
+      "source": "./plugins/excalidraw",
+      "description": "让 Agent 生成图形，在对话侧栏用 Excalidraw 编辑、引用选区、继续修改并导出。",
+      "description_i18n": {
+        "en": "Create and edit diagrams with Excalidraw and MCP tools.",
+        "zh-CN": "让 Agent 生成图形，在对话侧栏用 Excalidraw 编辑、引用选区、继续修改并导出。"
+      },
+      "category": "productivity",
+      "author": {
+        "name": "ZCode"
+      },
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/excalidraw/icon.png"
+    },
+    {
+      "name": "openpencil",
+      "componentTypes": ["ui"],
+      "displayName": "OpenPencil",
+      "displayName_i18n": {
+        "en": "OpenPencil",
+        "zh-CN": "OpenPencil"
+      },
+      "version": "0.3.1",
+      "source": "./plugins/openpencil",
+      "description": "在对话侧栏用 OpenPencil 编辑工作区里的 Figma .fig 设计稿，Agent 通过设计工具协同修改、引用选区并生成代码。",
+      "description_i18n": {
+        "en": "Edit design files with OpenPencil and MCP tools.",
+        "zh-CN": "在对话侧栏用 OpenPencil 编辑工作区里的 Figma .fig 设计稿，Agent 通过设计工具协同修改、引用选区并生成代码。"
+      },
+      "category": "productivity",
+      "author": {
+        "name": "ZCode"
+      },
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/openpencil/icon.png"
+    },
+    {
+      "name": "photocraft",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/photocraft/icon.png",
+      "source": "./plugins/photocraft",
+      "componentTypes": ["ui"],
+      "displayName": "PhotoCraft",
+      "displayName_i18n": {
+        "en": "PhotoCraft",
+        "zh-CN": "PhotoCraft"
+      },
+      "description": "PhotoCraft image editing in a ZCode panel, with workspace file opening and host-mediated exports.",
+      "description_i18n": {
+        "en": "PhotoCraft image editing in a ZCode panel, with workspace file opening and host-mediated exports.",
+        "zh-CN": "在 ZCode 面板中使用 PhotoCraft 进行图片编辑，支持打开工作区文件和通过宿主保存导出。"
+      },
+      "version": "0.2.2",
+      "author": {
+        "name": "ZCode"
+      },
+      "category": "productivity",
+      "keywords": [
+        "artcraft",
+        "wasm",
+        "ui-plugin",
+        "photocraft"
+      ]
+    },
+    {
+      "name": "vectorcraft",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/vectorcraft/icon.png",
+      "source": "./plugins/vectorcraft",
+      "componentTypes": ["ui"],
+      "displayName": "VectorCraft",
+      "displayName_i18n": {
+        "en": "VectorCraft",
+        "zh-CN": "VectorCraft"
+      },
+      "description": "VectorCraft vector illustration in a ZCode panel, with workspace file opening and host-mediated exports.",
+      "description_i18n": {
+        "en": "VectorCraft vector illustration in a ZCode panel, with workspace file opening and host-mediated exports.",
+        "zh-CN": "在 ZCode 面板中使用 VectorCraft 进行矢量绘图，支持打开工作区文件和通过宿主保存导出。"
+      },
+      "version": "0.2.2",
+      "author": {
+        "name": "ZCode"
+      },
+      "category": "productivity",
+      "keywords": [
+        "artcraft",
+        "wasm",
+        "ui-plugin",
+        "vectorcraft"
+      ]
+    },
+    {
+      "name": "pdfcraft",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/pdfcraft/icon.png",
+      "source": "./plugins/pdfcraft",
+      "componentTypes": ["ui"],
+      "displayName": "PdfCraft",
+      "displayName_i18n": {
+        "en": "PdfCraft",
+        "zh-CN": "PdfCraft"
+      },
+      "description": "PdfCraft PDF editing in a ZCode panel, with workspace file opening and host-mediated exports.",
+      "description_i18n": {
+        "en": "PdfCraft PDF editing in a ZCode panel, with workspace file opening and host-mediated exports.",
+        "zh-CN": "在 ZCode 面板中使用 PdfCraft 进行PDF 编辑，支持打开工作区文件和通过宿主保存导出。"
+      },
+      "version": "0.2.2",
+      "author": {
+        "name": "ZCode"
+      },
+      "category": "productivity",
+      "keywords": [
+        "artcraft",
+        "wasm",
+        "ui-plugin",
+        "pdfcraft"
+      ]
+    },
+    {
+      "name": "designcraft",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/designcraft/icon.png",
+      "source": "./plugins/designcraft",
+      "componentTypes": ["ui"],
+      "displayName": "DesignCraft",
+      "displayName_i18n": {
+        "en": "DesignCraft",
+        "zh-CN": "DesignCraft"
+      },
+      "description": "DesignCraft page layout in a ZCode panel, with workspace file opening and host-mediated exports.",
+      "description_i18n": {
+        "en": "DesignCraft page layout in a ZCode panel, with workspace file opening and host-mediated exports.",
+        "zh-CN": "在 ZCode 面板中使用 DesignCraft 进行页面排版，支持打开工作区文件和通过宿主保存导出。"
+      },
+      "version": "0.2.2",
+      "author": {
+        "name": "ZCode"
+      },
+      "category": "productivity",
+      "keywords": [
+        "artcraft",
+        "wasm",
+        "ui-plugin",
+        "designcraft"
+      ]
+    },
+    {
+      "name": "wordcraft",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/wordcraft/icon.png",
+      "source": "./plugins/wordcraft",
+      "componentTypes": ["ui"],
+      "displayName": "WordCraft",
+      "displayName_i18n": {
+        "en": "WordCraft",
+        "zh-CN": "WordCraft"
+      },
+      "description": "WordCraft word processing in a ZCode panel, with workspace file opening and host-mediated exports.",
+      "description_i18n": {
+        "en": "WordCraft word processing in a ZCode panel, with workspace file opening and host-mediated exports.",
+        "zh-CN": "在 ZCode 面板中使用 WordCraft 进行文字处理，支持打开工作区文件和通过宿主保存导出。"
+      },
+      "version": "0.2.2",
+      "author": {
+        "name": "ZCode"
+      },
+      "category": "productivity",
+      "keywords": [
+        "artcraft",
+        "wasm",
+        "ui-plugin",
+        "wordcraft"
+      ]
+    },
+    {
+      "name": "gridcraft",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/gridcraft/icon.png",
+      "source": "./plugins/gridcraft",
+      "componentTypes": ["ui"],
+      "displayName": "GridCraft",
+      "displayName_i18n": {
+        "en": "GridCraft",
+        "zh-CN": "GridCraft"
+      },
+      "description": "GridCraft spreadsheets in a ZCode panel, with workspace file opening and host-mediated exports.",
+      "description_i18n": {
+        "en": "GridCraft spreadsheets in a ZCode panel, with workspace file opening and host-mediated exports.",
+        "zh-CN": "在 ZCode 面板中使用 GridCraft 进行电子表格，支持打开工作区文件和通过宿主保存导出。"
+      },
+      "version": "0.2.2",
+      "author": {
+        "name": "ZCode"
+      },
+      "category": "productivity",
+      "keywords": [
+        "artcraft",
+        "wasm",
+        "ui-plugin",
+        "gridcraft"
+      ]
+    },
+    {
+      "name": "deckcraft",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/deckcraft/icon.png",
+      "source": "./plugins/deckcraft",
+      "componentTypes": ["ui"],
+      "displayName": "DeckCraft",
+      "displayName_i18n": {
+        "en": "DeckCraft",
+        "zh-CN": "DeckCraft"
+      },
+      "description": "DeckCraft presentations in a ZCode panel, with workspace file opening and host-mediated exports.",
+      "description_i18n": {
+        "en": "DeckCraft presentations in a ZCode panel, with workspace file opening and host-mediated exports.",
+        "zh-CN": "在 ZCode 面板中使用 DeckCraft 进行演示文稿，支持打开工作区文件和通过宿主保存导出。"
+      },
+      "version": "0.2.2",
+      "author": {
+        "name": "ZCode"
+      },
+      "category": "productivity",
+      "keywords": [
+        "artcraft",
+        "wasm",
+        "ui-plugin",
+        "deckcraft"
+      ]
+    },
+    {
+      "name": "cadcraft",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/cadcraft/icon.png",
+      "source": "./plugins/cadcraft",
+      "componentTypes": ["ui"],
+      "displayName": "CADCraft",
+      "displayName_i18n": {
+        "en": "CADCraft",
+        "zh-CN": "CADCraft"
+      },
+      "description": "CADCraft CAD drafting in a ZCode panel, with workspace file opening and host-mediated exports.",
+      "description_i18n": {
+        "en": "CADCraft CAD drafting in a ZCode panel, with workspace file opening and host-mediated exports.",
+        "zh-CN": "在 ZCode 面板中使用 CADCraft 进行CAD 绘图，支持打开工作区文件和通过宿主保存导出。"
+      },
+      "version": "0.2.2",
+      "author": {
+        "name": "ZCode"
+      },
+      "category": "productivity",
+      "keywords": [
+        "artcraft",
+        "wasm",
+        "ui-plugin",
+        "cadcraft"
+      ]
+    },
+    {
+      "name": "soundcraft",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/soundcraft/icon.png",
+      "source": "./plugins/soundcraft",
+      "componentTypes": ["ui"],
+      "displayName": "SoundCraft",
+      "displayName_i18n": {
+        "en": "SoundCraft",
+        "zh-CN": "SoundCraft"
+      },
+      "description": "SoundCraft audio editing in a ZCode panel, with workspace file opening and host-mediated exports.",
+      "description_i18n": {
+        "en": "SoundCraft audio editing in a ZCode panel, with workspace file opening and host-mediated exports.",
+        "zh-CN": "在 ZCode 面板中使用 SoundCraft 进行音频编辑，支持打开工作区文件和通过宿主保存导出。"
+      },
+      "version": "0.2.2",
+      "author": {
+        "name": "ZCode"
+      },
+      "category": "productivity",
+      "keywords": [
+        "artcraft",
+        "wasm",
+        "ui-plugin",
+        "soundcraft"
+      ]
+    },
+    {
+      "name": "tripo-3d",
+      "source": "./plugins/tripo-3d",
+      "displayName": "Tripo 3D",
+      "displayName_i18n": {
+        "en": "Tripo 3D",
+        "zh-CN": "Tripo 3D"
+      },
+      "description": "Generate textured, rig-ready 3D models from a text prompt or a reference image with Tripo, and export GLB/FBX/OBJ/STL/USDZ/3MF straight into your project. Connect your China-mainland Tripo account once in the browser (OAuth), no API key pasting.",
+      "description_i18n": {
+        "en": "Generate textured, rig-ready 3D models from a text prompt or a reference image with Tripo, and export GLB/FBX/OBJ/STL/USDZ/3MF straight into your project. Connect your China-mainland Tripo account once in the browser (OAuth), no API key pasting.",
+        "zh-CN": "用 Tripo 从一句话或一张图生成带贴图、可绑骨的 3D 模型，支持动画、减面与 GLB/FBX/OBJ/STL/USDZ/3MF 导出，文件直接落到项目里。浏览器里授权一次国内站 Tripo 账号即可使用，无需粘贴 API Key。"
+      },
+      "version": "0.1.3",
+      "author": {
+        "name": "VAST",
+        "url": "https://www.tripo3d.ai"
+      },
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/tripo-3d/icon.png",
+      "category": "productivity",
+      "keywords": [
+        "3d",
+        "asset-generation",
+        "game-development",
+        "glb",
+        "fbx",
+        "text-to-3d",
+        "image-to-3d",
+        "3d-printing",
+        "rigging",
+        "mcp"
+      ],
+      "examplePrompts": [
+        "Generate a low-poly treasure chest and export it as FBX for Unity",
+        "Turn this concept image into a textured 3D model and export it as GLB",
+        "Make a 3D-printable knight figurine and export STL"
+      ],
+      "examplePrompts_i18n": {
+        "zh-CN": [
+          "生成一个低多边形的宝箱 3D 模型，导出 FBX 给 Unity 用",
+          "把这张概念图变成带贴图的 3D 模型，导出 GLB",
+          "生成一个可 3D 打印的骑士小雕像，导出 STL 文件"
+        ]
+      }
+    },
+    {
+      "name": "zcode-context",
+      "source": "./external_plugins/zcode-context",
+      "description": "Read-only session usage, model input composition, request differences and compaction events.",
+      "description_i18n": {
+        "en": "Read-only session usage, model input composition, request differences and compaction events.",
+        "zh-CN": "只读查看会话用量、模型输入组成、请求差异和压缩事件。"
+      },
+      "version": "0.3.9",
+      "author": {
+        "name": "Kevinzzz6",
+        "url": "https://github.com/Kevinzzz6"
+      },
+      "category": "developer-tools",
+      "keywords": [
+        "context",
+        "tokens",
+        "usage",
+        "session",
+        "mcp"
+      ],
+      "examplePrompts": [
+        "Show the context composition of this session and which category takes the most room",
+        "What did the last compaction summarize away?"
+      ],
+      "examplePrompts_i18n": {
+        "zh-CN": [
+          "看看这个会话的上下文组成，哪一类内容占得最多",
+          "上一次压缩摘要掉了哪些内容？"
+        ]
+      }
+    },
+    {
+      "name": "jupyter-notebook",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/jupyter-notebook/icon.png",
+      "componentTypes": [
+        "ui"
+      ],
+      "displayName": "Jupyter Notebook",
+      "displayName_i18n": {
+        "en": "Jupyter Notebook",
+        "zh-CN": "Jupyter Notebook"
+      },
+      "version": "0.1.0",
+      "source": "./plugins/jupyter-notebook",
+      "description": "在对话侧栏打开 Jupyter Notebook：连接已有的 Jupyter Server 或为工作区启动一个，Agent 与用户一起编辑和运行 cell。",
+      "description_i18n": {
+        "en": "Work on Jupyter notebooks in a side panel: connect to a running Jupyter Server or start one for the workspace, and edit and run cells together with the agent.",
+        "zh-CN": "在对话侧栏打开 Jupyter Notebook：连接已有的 Jupyter Server 或为工作区启动一个，Agent 与用户一起编辑和运行 cell。"
+      },
+      "category": "developer-tools",
+      "author": {
+        "name": "ZCode"
+      }
+    },
+    {
+      "name": "typst-workbench",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/typst-workbench/icon.png",
+      "componentTypes": [
+        "ui"
+      ],
+      "displayName": "Typst Workbench",
+      "displayName_i18n": {
+        "en": "Typst Workbench",
+        "zh-CN": "Typst 工作台"
+      },
+      "version": "0.1.0",
+      "source": "./plugins/typst-workbench",
+      "description": "用你本机的 Typst 在对话侧栏实时预览文档：Agent 改完文件预览即刻更新，查看错误与渲染页面、在预览中标出位置、导出 PDF；你可以选中预览中的文字，连同对应的源码位置发给 Agent。",
+      "description_i18n": {
+        "en": "Live-preview Typst documents in a side panel with the Typst installed on your computer: the preview updates the moment the agent saves a file, the agent checks errors, looks at rendered pages, points at places in the preview and exports PDFs, and you can send selected text to the agent together with its source location.",
+        "zh-CN": "用你本机的 Typst 在对话侧栏实时预览文档：Agent 改完文件预览即刻更新，查看错误与渲染页面、在预览中标出位置、导出 PDF；你可以选中预览中的文字，连同对应的源码位置发给 Agent。"
+      },
+      "category": "productivity",
+      "author": {
+        "name": "ZCode"
+      }
+    },
+    {
+      "name": "zotero",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/zotero/icon.png",
+      "componentTypes": [
+        "ui"
+      ],
+      "displayName": "Zotero",
+      "displayName_i18n": {
+        "en": "Zotero",
+        "zh-CN": "Zotero"
+      },
+      "version": "0.1.0",
+      "source": "./plugins/zotero",
+      "description": "在对话侧栏使用你的 Zotero 文库：搜索与阅读论文和你的高亮，Agent 在 PDF 中标出依据、生成引用与 .bib 文件，并可导入论文、写笔记、整理分类。",
+      "description_i18n": {
+        "en": "Work with your Zotero library in a side panel: search and read papers and your highlights, let the agent highlight evidence in PDFs, cite and keep a .bib file, and import papers, write notes and organise collections.",
+        "zh-CN": "在对话侧栏使用你的 Zotero 文库：搜索与阅读论文和你的高亮，Agent 在 PDF 中标出依据、生成引用与 .bib 文件，并可导入论文、写笔记、整理分类。"
+      },
+      "category": "productivity",
+      "author": {
+        "name": "ZCode"
+      }
     }
   ]
 }

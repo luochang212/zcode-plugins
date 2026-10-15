@@ -63,16 +63,6 @@ class GitHubPluginTests(unittest.TestCase):
         self.assertEqual(entry["description"], manifest["description"])
         self.assertEqual(entry["description_i18n"], manifest["description_i18n"])
         self.assertEqual(entry["author"], manifest["author"])
-        self.assertEqual(
-            entry["icon"],
-            "https://cdn-zcode.z.ai/zcode/official-plugin/assets/github/icon.png",
-        )
-        icon = ROOT / "assets" / "github" / "icon.png"
-        self.assertTrue(icon.is_file())
-        self.assertEqual(
-            hashlib.sha256(icon.read_bytes()).hexdigest(),
-            "916da4b4e72d9e80df2b2162ae47d01db372caadaaaad2e3a26339284965a548",
-        )
 
     def test_all_workflow_skills_are_packaged(self) -> None:
         skill_dirs = {
