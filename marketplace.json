@@ -133,7 +133,7 @@
     },
     {
       "name": "autoresearch",
-      "source": "./plugins/autoresearch",
+      "source": "./external_plugins/autoresearch",
       "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/autoresearch/icon.png",
       "description": "Autonomous experiment loop for ZCode: set a goal, pick a mechanical metric, and let the agent iterate. It measures, keeps what works, reverts what doesn't, and repeats. Provides init/run/log experiment tools (MCP), a loop protocol skill, guardrails (frozen benchmark, checks backpressure, memory injection, Stop continuation), and static + live dashboards.",
       "description_i18n": {
